@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Farmhouse Booking</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Farmhouse Booking</h2>
+
+      <form action="#" method="post">
+        <label>Full Name</label>
+        <input type="text" name="name" required minlength="3" />
+
+        <label>Email</label>
+        <input type="email" name="email" required />
+
+        <label>Mobile Number</label>
+        <input type="tel" name="phone" required pattern="[0-9]{10}" />
+
+        <div class="row">
+          <div>
+            <label>Check-in Date</label>
+            <input type="date" name="checkin" required />
+          </div>
+          <div>
+            <label>Check-out Date</label>
+            <input type="date" name="checkout" required />
+          </div>
+        </div>
+
+        <label>Number of Guests</label>
+        <input type="number" name="guests" min="1" required />
+
+        <label>Farmhouse Type</label>
+        <select name="type" required>
+          <option value="">-- Select --</option>
+          <option>Standard</option>
+          <option>Premium</option>
+          <option>Luxury</option>
+        </select>
+
+        <label>Facilities</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" /> Pool</label>
+          <label><input type="checkbox" /> BBQ</label>
+          <label><input type="checkbox" /> Campfire</label>
+        </div>
+
+        <button type="submit">Confirm Booking</button>
+      </form>
+    </div>
+  </body>
+</html>
