@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===== HEADER ===== */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #131921;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.header input {
+  width: 50%;
+  padding: 8px;
+  border-radius: 4px;
+  border: none;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  background: #232f3e;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  padding: 10px 20px;
+  gap: 20px;
+}
+
+.navbar li {
+  color: #fff;
+  cursor: pointer;
+}
+
+/* ===== MAIN ===== */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.category-banner {
+  background: #a1a19eff;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.section-title {
+  margin-bottom: 15px;
+}
+
+/* ===== PRODUCT GRID ===== */
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.product-card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 6px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.product-card img {
+  height: 300px;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.05);
+}
+
+.product-card h3 {
+  margin: 10px 0;
+}
+
+.price {
+  color: #b12704;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.product-card button {
+  padding: 8px 15px;
+  border: none;
+  background: #f0c14b;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.product-card button:hover {
+  background: #ddb347;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: #131921;
+  color: #fff;
+  padding: 30px 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
+  gap: 20px;
+}
+
+.footer h4 {
+  margin-bottom: 10px;
+}
+
+.footer p {
+  font-size: 14px;
+}
+
+.footer .copyright {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 13px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (min-width: 600px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .product-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .header input {
+    width: 60%;
+  }
+}
